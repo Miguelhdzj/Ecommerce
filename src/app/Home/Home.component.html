@@ -1,0 +1,22 @@
+<table class="table" style="text-align: center;">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Articulo</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Agregar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let lstArticulo of lstProducto; let i = index">
+            <th scope="row">{{lstArticulo.nombreProducto}}</th>
+            <td>{{lstArticulo.precioProducto | currency}}</td>
+            <td>{{lstArticulo.inventarioProducto}}</td>
+            <td><a (click) = "AgregarCarrito()">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </a></td>
+
+        </tr>
+    </tbody>
+</table>
+
